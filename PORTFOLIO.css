@@ -261,7 +261,7 @@ transition: ease-in-out 0.5s;
     background-color: rgba(0, 0, 0, );
     border-bottom: 0.01vb solid hsl(334, 14%, 90%,0);
     background-blend-mode: color luminosity 100% 0%;
-    padding: 2rem 2vw;
+    padding: 2.5vb;
     position: static;
     top: 0;
     width: 100%;
@@ -275,7 +275,7 @@ transition: ease-in-out 0.5s;
     .navbar ul {
         flex-direction: row;
         align-items: center;
-        gap: 2vw;
+        gap: 1rem;
     }
 }
 
@@ -283,7 +283,7 @@ transition: ease-in-out 0.5s;
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 3vb;
 }
 
 @font-face {
