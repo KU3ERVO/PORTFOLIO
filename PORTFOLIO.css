@@ -331,16 +331,17 @@ border: 1px solid rgba(255, 255, 255, 1);
 
 @font-face {
     
-        font-family: 'Impact Regular';
+        font-family: 'ImpactWeb';
         font-style: normal;
         font-weight: normal;
-        src: local('Impact Regular'), url('rsc/impact.ttf') format('truetype');
-        src: local('Impact Regular'), url('rsc/impact.woff') format('woff');
+        src: url('rsc/impact.ttf') format('truetype'),
+        url('rsc/impact.woff') format('woff');
+        font-display: swap;
         
 }
 
 .moving-text{
-    font-family:'Impact Regular', Impact, sans-serif;
+    font-family:'ImpactWeb', Impact, sans-serif;
     font-size: 20vb;
     display: flex;
     position: absolute;
