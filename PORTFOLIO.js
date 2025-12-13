@@ -1,51 +1,22 @@
-function expandBlock(blockId) {
-    const block = document.getElementById(blockId);
-    const expandedView = document.getElementById('expandedView');
-    const expandedImage = document.getElementById('expandedImage');
-    const expandedTitle = document.getElementById('expandedTitle');
-    const expandedDescription = document.getElementById('expandedDescription');
+function expandBlock(id) {
+    const block = document.getElementById(id);
+    const bg = getComputedStyle(block).backgroundImage;
 
-    // Example content: Replace with dynamic content if needed
-    const backgroundImage = window.getComputedStyle(block).getPropertyValue('background-image');
-    expandedImage.style.backgroundImage = backgroundImage;
+    const imgUrl = bg.slice(5, -2); // extract url("...")
 
-    expandedView.classList.add('active');
+    document.getElementById('expandedImage').src = imgUrl;
+    document.getElementById('expandedTitle').textContent =
+        block.querySelector('h3').textContent;
+    document.getElementById('expandedDescription').textContent =
+        block.querySelector('.desc').textContent;
 
-    switch(block){
-        case BL1:
-             expandedTitle.textContent= "VHS 70s"
-             expandedDescription.textContent="promotional VHS 2 mobile wallpaper \n "
-             break;
-        case BL2:
-            expandedTitle.textContent= "VHS GLITCH"
-            expandedDescription.textContent="promotional VHS 2 mobile wallpaper \n"
-            break;
-        case BL3:
-            expandedTitle.textContent= "VHS ART ADD POSTER"
-            expandedDescription.textContent="promotional VHS 2 mobile wallpaper \n"
-            break;
-        case BL4:
-            expandedTitle.textContent= "VHS-2 ENIGMA"
-            expandedDescription.textContent="promotional VHS 2 mobile wallpaper \n"
-            break;
-        case BL5:
-            expandedTitle.textContent= "WTF FILM POSTER"
-            expandedDescription.textContent="promotional VHS 2 mobile wallpaper \n"
-            break;
-        case BL6:
-            expandedTitle.textContent= "WHAT COULD GO WRONG POSTER"
-            expandedDescription.textContent="promotional VHS 2 mobile wallpaper \n"
-            break;
-        case BL7:
-            expandedTitle.textContent= "VHS2 OLD MAGAZINE"
-            expandedDescription.textContent="promotional VHS 2 mobile wallpaper \n"
-            break;
-        case BL8:
-            expandedTitle.textContent= "BEAUTY IS PAIN WALLPAPER"
-            expandedDescription.textContent="promotional VHS 2 mobile wallpaper \n"
-            break;
-    }
+    document.getElementById('expandedView').classList.add('active');
 }
+
+function closeExpandedView() {
+    document.getElementById('expandedView').classList.remove('active');
+}
+
 
 function closeExpandedView() {
     const expandedView = document.getElementById('expandedView');

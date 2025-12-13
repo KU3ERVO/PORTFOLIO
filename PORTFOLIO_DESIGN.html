@@ -12,7 +12,7 @@
         <ul>
             <li><a href="index.html" id="HOME">Home</a></li>
             <li><a href="#3" id="ME">RESUME</a></li>
-            <li style="float: right;"><a href="#4" id="CONT">Contact</a></li>
+            <li class="contact-item"><a href="#4" id="CONT">Contact</a></li>
         </ul>
     </nav>
 
@@ -91,16 +91,21 @@
     </div>
     <!-- Expanded View -->
 
-<div class="expanded-view" id="expandedView">
-    <div class="expanded-content">
-        <div class="expanded-image" id="expandedImage"></div>
-        <button class="close-btn" onclick="closeExpandedView()">×</button>
-        <div class="expanded-text" id="expandedText">
-            <h3 id="expandedTitle">Title</h3>
-            <p id="expandedDescription">Description</p>
+    <div class="expanded-view" id="expandedView">
+        <div class="expanded-content">
+            <button class="close-btn" onclick="closeExpandedView()">×</button>
+    
+            <div class="expanded-image">
+                <img id="expandedImage" alt="">
+            </div>
+    
+            <div class="expanded-text">
+                <h3 id="expandedTitle"></h3>
+                <p id="expandedDescription"></p>
+            </div>
         </div>
     </div>
-</div>
+    
 
 </body>
 <footer>
