@@ -19,7 +19,7 @@ $raisin-black: hsla(334, 12%, 12%, 1);*/
 
 /* Body and layout */
 body {
-    background-color: hsl(334, 11%, 10%);
+    background-color: hsl(334, 11%, 5%);
     /* background-image: url(https://png.pngtree.com/background/20230607/original/pngtree-some-red-roses-are-seen-here-in-a-dark-setting-picture-image_2902794.jpg);*/
     /*background-image:url("rsc/cshino.png");*/
     background-size: cover;
@@ -27,6 +27,28 @@ body {
     flex-direction: column;
     height: 100vh;
 }
+
+.vintage-bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; 
+    object-fit: cover;
+    pointer-events: none; 
+    
+    mix-blend-mode: screen; 
+
+    opacity: 0.4; 
+    filter: grayscale(1) contrast(120%);
+}
+
+#vid3{
+opacity: 0.02;
+filter: contrast(600%);
+}
+
 
 #BACKGROUNDBH {
     backdrop-filter: blur(2vb);
@@ -60,6 +82,7 @@ body {
     justify-content: center;
     margin-top: 3vw;
     margin-bottom: 4vw;
+    z-index: 4;
 
 }
 
@@ -334,14 +357,12 @@ body:has(.block:hover) .background {
 
 /* Navbar styles */
 .navbar {
-    background-color: rgba(0, 0, 0, );
-    border-bottom: 0.01vb solid hsl(334, 14%, 90%, 0);
     background-blend-mode: color luminosity 100% 0%;
-    padding: 2.5vb;
+    padding: 2rem;
     position: static;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
 }
 
 /* Mobile adjustment */
@@ -422,7 +443,7 @@ body:has(.block:hover) .background {
     align-items: center;
     flex-grow: 1;
     gap: 5vb;
-    margin-top: 5vb;
+    margin: auto;
     /* Space below navbar */
 }
 
@@ -434,11 +455,12 @@ body:has(.block:hover) .background {
     border: 1px solid rgba(255, 255, 255, 1);
     font-family: 'Roboto Serif';
     background-color: rgba(255, 255, 255, 0.014);
-    border: none;
+    border: solid,rgba(255, 255, 255, 0.1),1px ;
     border-radius: 3vb;
     color: hsl(334, 14%, 90%);
     height: 50vb;
     width: 30vb;
+    text-align: center;
     font-size: 2.5vb;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -537,6 +559,8 @@ body:has(.block:hover) .background {
     }
 }
 
+
+
 footer {
     font-family: Arial, Helvetica, sans-serif;
     color: hsl(0, 0%, 100%);
@@ -550,3 +574,162 @@ footer {
     z-index: 9;
 
 }
+
+
+
+
+/*RESUME*/
+
+.button-container2 {
+    font-family: 'Roboto Serif';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 5vb;
+    margin: auto;
+    width: 100%;
+}
+
+.foto{
+    width: 20rem; 
+    aspect-ratio: 1 / 1;
+    height: auto;
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-image: url(rsc/cshino.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    
+}
+
+.carta {
+    box-shadow: 0 1cap 10vb rgb(0, 0, 0, 1);
+    backdrop-filter: blur(1vb);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.014);
+    border-radius: 3vb;
+    color: hsl(334, 14%, 90%);
+    padding: 3rem;
+    width: 60% !important; /* Ocupa casi todo el ancho */
+    height: auto !important;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+.carta2{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0 1cap 10vb rgb(0, 0, 0, 1);
+    backdrop-filter: blur(1vb);
+    background-color: rgba(255, 255, 255, 0.014);
+    border-radius: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: hsl(334, 14%, 90%);
+    padding: 0.5rem;
+    padding-left: 1rem;
+    align-self:center ;
+    height: auto;
+    width: auto;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
+
+.btn-group {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite que baje si no cabe */
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Foto arriba, Carta abajo */
+        text-align: center;
+    }
+}
+
+.doc-btn{
+    font-family: 'FranklinWeb', 'Franklin Gothic Medium', sans-serif;
+    background-color: hsl(1, 79%, 48%);
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+.doc-btn:hover{
+    background-color: white;
+    color: black;
+    cursor:pointer;
+}
+
+.desc {
+    line-height: 1.6;       /* Da aire entre líneas para que no agobie */
+    text-align: justify;    /* Ajusta el texto por ambos lados (efecto bloque) */
+    hyphens: auto;          /* Corta palabras con guiones si es necesario para rellenar huecos */
+    color: rgba(255, 255, 255, 0.8); /* Un blanco suave para no cansar la vista */
+    max-width: 100%;        /* Asegura que no se salga de la carta */
+
+}
+
+.desc br {
+    content: "";
+    display: block;
+    margin-bottom:0px ; /* Aquí controlas los píxeles exactos de separación */
+}
+
+/* Wrapper */
+.download-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* DOWNLOAD IN */
+.download-label {
+    font-family: 'FranklinWeb', 'Franklin Gothic Medium', sans-serif;
+    white-space: nowrap;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Desktop: label on the LEFT */
+@media (min-width: 769px) {
+    .download-wrapper {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Mobile: label on TOP */
+@media (max-width: 768px) {
+    .download-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
